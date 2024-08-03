@@ -40,6 +40,13 @@ public class LoginPage {
     public void clickLoginButton() {
         loginButton.click();
     }
+    // New method to support BDD steps
+    public void loginUser() {
+        // Assuming credentials are set
+        usernameField.sendKeys("standard_user");
+        passwordField.sendKeys("secret_sauce");
+        loginButton.click();
+    }
     public String getErrorMessage() {
         return errorMessage.getText();
     }
