@@ -1,0 +1,27 @@
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class MenuPage {
+    private WebDriver driver;
+
+    @FindBy(id = "menu_button")
+    private WebElement menuButton;
+
+    @FindBy(id = "reset_app_button")
+    private WebElement resetAppButton;
+
+    public MenuPage(WebDriver driver) {
+        this.driver = driver;
+        PageFactory.initElements(driver, this);
+    }
+
+    public void clickMenuButton() {
+        menuButton.click();
+    }
+
+    public void clickResetAppState() {
+        resetAppButton.click();
+    }
+}
