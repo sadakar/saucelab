@@ -1,0 +1,1 @@
+// CheckoutPage.java content with page factory implementation
